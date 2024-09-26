@@ -1,0 +1,97 @@
+/*Reseteo de estilos*/
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Inicialización de variables*/
+:root{
+    --color-primary: cyan;
+    --color-secondary: blue;
+    --maxWidth: 1200px;
+    --color-letter: white;
+}
+
+/*Fuentes perosnalizadas*/
+
+/*Utilización de fuentes - Accesibilidad*/
+/*1em = 16px*/
+html{
+    /* Accesibilidad - 62.5% va a equivaler a 10px sobre tamaño Normal 
+     de nuestro navegador que está establecido en 16px */
+    font-size: 62.5%;
+}
+
+.container{
+    width: var(--maxWidth);
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-primary);
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.4rem;
+    /*
+    font-size: 62.5%; --> equivale a 10 px Fuente Normal (16px);
+    1.4rem --> equivale a 14 px (1.4 * 10px)
+    */
+}
+
+.navbar{
+    width: 100%;
+    background-color: var(--color-secondary);
+    height: 40px;
+    font-size: 1.7rem;
+    color: var(--color-letter);
+    box-shadow: 0px 0px 5px grey;
+}
+
+.navbar__list{
+    /* display: flex;
+    flex-direction: row; */
+    margin: 0px auto;
+    width: 95%;
+    justify-content: space-around;
+}
+.list__item{
+    /*display: inline-block;
+    */float: left;
+    line-height: 40px;
+    /*Centrarrespectoalaltodeelcontenedorenelquenosencontramos*/border-right: 1px solid black;
+    justify-content: space-around;
+    
+}
+.list__item a{
+    color: var(--color-letter);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* .navbar__list li:first-child{
+    border-left: 1px solid black;
+} */
+
+.list__item:first-child{
+    border-left: 1px solid black;
+}
+
+.list__item:hover{
+    background-color: purple;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
