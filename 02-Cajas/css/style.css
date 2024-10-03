@@ -27,6 +27,7 @@ html{
 
 .container{
     width: var(--maxWidth);
+    height: 1340px;
     border: 1px solid black;
     margin: 0 auto;
 }
@@ -287,4 +288,21 @@ html{
         margin-left: 50px;
         transform: rotate(0deg);
     }
+}
+
+.box__container{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    position: absolute; 
+}
+
+.box__free--3{
+    background-color: bisque;
+}
+
+.box__free--4{
+    background-color: brown;
+    left: 104px;
+    top : 0px;
 }

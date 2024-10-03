@@ -1,0 +1,115 @@
+/* Reseteo estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    border: 1px solid black;
+}
+.container__title, .container__subtitle{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.container__subtitle{
+    border-bottom: 1px solid black;
+}
+.container__layout{
+    /* float: left; */
+    display: flex; /*Este display con flex es equivalente a float left*/
+
+    flex-flow: row wrap;
+    /* Equivalente a esto */
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    justify-content: space-around;
+    border: 2px solid green;
+    width: 100%;
+    height: 700px;
+}
+
+.layout__box{
+    /* float: left; */
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid black;
+    width: 20.5%;
+    flex-grow: 1;
+    flex-basis: calc(100% / 4);
+}
+
+.layout__box--red{
+    background-color: red;
+    /* order: 2; */
+    /* Equivalente al width, asigna un tamaño específico */
+    flex-basis: calc(100% / 4 + 100px);
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.layout__box--yellow{
+    background-color: yellow;
+    /* order: 1; */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.layout__box--blue{
+    background-color: blue;
+    /* order: 3; */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.layout__box--cyan{
+    background-color: cyan;
+    /* order: 6; */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.layout__box--green{
+    background-color: green;
+    /* order: 4; */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.layout__box--orange{
+    background-color: orange;
+    /* order: 5; */
+    animation-name: rotar;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotar {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(90deg);
+    }
+    66%{
+        transform: rotate(270deg);
+        border-radius: 100px;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
