@@ -206,3 +206,51 @@
     opacity: 0.7;
     margin-left: 20px;
 }
+
+/* Responsivo */
+@media (max-width: 950px){
+    /* body{
+       background-color: aquamarine;
+   }  */
+   .content__projects{
+       display: grid;
+       /* auto-fill incluye el contenido acorde al tamaño definido para cada proyecto */
+       grid-template-columns: repeat(2,1fr);
+       grid-gap: 10px;
+      
+   }
+}
+   /*vista movil*/
+   @media (max-width: 780px){
+        /* body{
+           background-color:aqua;
+       }  */
+       .container__header{
+           display: grid;
+           grid-template-columns: 1fr ;
+           align-items: center;
+           width: 100%;
+           height: 120px;
+           border-bottom: 1px solid rgba(226,225,226, 0.8);
+       }
+       .container__logo{
+           text-align: center;
+       }
+   
+       .menu__list{
+           text-align: center;
+       }
+       .content{
+            /* Añadir aquí Flex y Align y/o justify */
+            display: grid;
+            grid-template-columns: 1fr;
+           
+            margin-bottom: 20px;
+        }
+        .lateral__list{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            justify-content: space-between;
+            padding: auto;
+        }
+   }

@@ -29,4 +29,61 @@ body{
 
 .website__header{
     grid-area: cabecera;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.website__menu{
+    grid-area: menu;
+    background-color: darkturquoise;
+    color: white;
+    line-height: 70px;
+}
+
+.menu__list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+}
+
+.menu__list li:hover{
+    background-color: purple;
+    transform: scale(1.1);
+    color: white;
+    text-decoration: none;
+}
+.list__item a{
+    color: black;
+    font-size: 18px;
+}
+
+.website__content{
+    grid-area: contenido;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* display: flex;
+    flex-wrap: wrap; */
+    grid-gap: 20px;
+}
+
+.content__article{
+    /* display: flex;
+    flex-basis: calc(25% - 20px); */
+    border: 1px solid black;
+}
+
+.website__sidebar{
+    grid-area: lateral;
+    background-color: aqua;
+}
+
+.website__footer{
+    line-height: 70px;
+    grid-area: footer;
+    background-color: bisque;
+    align-items: center;
+    text-align: center;
 }
