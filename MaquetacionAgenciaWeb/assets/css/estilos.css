@@ -8,7 +8,7 @@
     --color-secondary: #fff;
     --color-banner: #2522BA;
     --color-text-btn: #0d6efd;
-    --colog-bg-btn: #ffdc60;
+    --color-bg-btn: #ffdc60;
     --color-subtitle: #c75c6f;
     --color-title: #292930;
     --color-bg-services: #f8f8f8;
@@ -54,6 +54,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .menu__navbar{
     /* Flex + aling/justify */
+    display: grid;
     grid-template-columns: 1fr 0fr 0fr;
     width: 100%;
     align-items: center;
@@ -77,7 +78,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .nav__title{
     /* position */
     position: relative;
-    display: inline-block;
+    /* display: flex;*/
+    align-items: baseline; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     line-height: 6rem;
     font-weight: 500;
     color: var(--color-text-body);
@@ -112,7 +116,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .nav__submenu{
     /* position */
-    
+    display: block;
+    position: absolute;
+
+    top: 100%;
+    left: 2rem;
     
     min-width: 19rem;
     padding: 1.5rem 1rem;
@@ -120,18 +128,38 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     box-shadow: 0px 13px 48px 0 rgba(0,0,0,15%);
     
     /* visibility, opacity y efecto */
-
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms easy-in-out;
 }
 
 .submenu__item{
     /* efecto */ 
+    opacity: 0;
+    transform: translateX(3rem);
+    transition: all 400ms ease-in-out;
 }
 
 /* efecto */
-
+.submenu__item:nth-child(1){
+    transition-delay: 100ms;
+}
+.submenu__item:nth-child(2){
+    transition-delay: 200ms;
+}
+.submenu__item:nth-child(3){
+    transition-delay: 300ms;
+}
+.submenu__item:nth-child(4){
+    transition-delay: 400ms;
+}
+.submenu__item:nth-child(5){
+    transition-delay: 500ms;
+}
 
 .submenu__title{
     /* position */ 
+    position: relative;
     font-size: 1.4rem;
     text-transform: capitalize;
     text-decoration: none;
@@ -139,18 +167,62 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-text-body);
     padding: 0.7rem 1.5rem;
     /* efecto */
-
+    transition: all 300ms ease-in-out;
 }
 
 /* efectos varios */
+.nav__item:hover>.nav__submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    left: 0;
+}
 
+.nav__item:hover>.nav__submenu>.submenu__item{
+    opacity: 1;
+    transform: translateX(0);
+}
 
-
+.submenu__title:hover{
+    color: var(--color-primary);
+}
+.submenu__item::before{
+    content: "";
+    height: 0.15rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0.5rem;
+    opacity: 0;
+    left: 35%;
+    transition: all 300ms linear;
+}
+.submenu__item:hover:nth-child(1)::before{
+    width: 52%;
+    opacity: 1;
+    
+    left: 8%;
+}
+.submenu__item:hover:nth-child(2)::before{
+    width: 62%;
+    opacity: 1;
+    left: 8%;
+}
+.submenu__item:hover:nth-child(3)::before{
+    width: 77%;
+    opacity: 1;
+    left: 8%;
+}
+.submenu__item:hover:nth-child(4)::before{
+    width: 47%;
+    opacity: 1;
+    left: 8%;
+}
 
 /* Estilos para el Banner */
 .layout__banner{
     /* position */
-
+    position: relative;
     min-height: 60rem;
     /*border: 2px solid red; */
     margin: 0 3rem;
@@ -165,7 +237,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .banner__content{
     /* position */
-
+    position: relative;
+    display: inline-block;
 
     width: 50%;
     padding: 0 1.5rem;
@@ -188,51 +261,156 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     text-align: center;
     box-shadow: 0px 45px 70px -25px var(--color-primary);
     /* efecto */
+    transition: all 300ms ease-in-out;
 }
 /* efecto */
-
+.banner__btn:hover{
+    background-color: var(--color-text-btn);
+    color: var(--color-secondary);
+    transform: scale(1.1);
+}
 
 .shapes__item{
     /* position y z-index */
-    
+    position: absolute;
+    z-index: 2;
     pointer-events: none;
 }
 .shapes__item--shape1{
     /* position y animación */
+    top: 0;
+    right: 0;
+    animation: muestraD 2s;
+}
+
+@keyframes muestraD {
+    0%{
+        transform: translatex(50%);
+    }
+    100%{
+        transform: translatex(0);
+    }
 }
 
 .shapes__item--shape2{
     /* position y animación */
+    bottom: 0;
+    left: 0;
+    animation: muestraI 2s;
+}
+@keyframes muestraI {
+    0%{
+        transform: translatex(-50%);
+    }
+    100%{
+        transform: translatex(0);
+    }
 }
 
 .shapes__item--shape3{
     /* position y animación */
+    top: 34%;
+    left: 50%;
+    animation: mueveShape3 20s infinite;
+}
+
+@keyframes mueveShape3 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(50px) translateY(-200px);
+    }
+    70%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 
 .shapes__item--shape4{
     /* position y animación */
+    left: 45%;
+    opacity: 0.5;
+    animation: mueveShape4 20s infinite;
 }
 .shapes__item--shape4 .shapes__img{
     opacity: 0.5;
     width: 7.5rem;
 }
 
+@keyframes mueveShape4 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateY(100px);
+    }
+    70%{
+        transform: translateX(500px) translateY(300px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
 
 .shapes__item--shape5{
     /* position y animación */
+    top: 15%;
+    left: 15%;
+    opacity: 0.5;
+    animation: mueveShape5 20s infinite;
+}
+
+@keyframes mueveShape5 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(-150px) translateY(300px);
+    }
+    70%{
+        transform: translateX(500px) translateY(300px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 
 .shapes__item--shape6{
     /* position y animación */
+    bottom: 10%;
+    left: 13%;
+    animation: mueveShape6 25s infinite;
+}
+@keyframes mueveShape6 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(500px);
+    }
+    70%{
+        transform: translateY(500px) translateX(-10px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
 }
 .shapes__item--shape7{
     /* position y animación */
+    top: 0;
+    right: 5%;
+    z-index: 1;
+    animation: muestraD 2s;
 }
 
 /* Estilos sección Servicios */
 .layout__services{
     /* position y z-index */
-
+    position: relative;
+    z-index: 1;
     margin: 14rem 10rem;
     margin-bottom: 4rem;
     /* border: 1px solid red; */
@@ -268,13 +446,15 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .services__list{
     /* flex */
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 3rem; /* separación entre los elementos */
 }
 .services__service{
     /* flex */
-
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    height: 60%;
     padding: 5rem 4rem;
     margin-bottom: 4rem;
     border-radius: 3rem;
@@ -284,6 +464,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border-image-source: linear-gradient(90deg, var(--color-bg-services), rgba(255,255,255,0));
     /* efecto */
 
+    transition: all 300ms linear;
+}
+.services__service:hover{
+    background-color: var(--color-bg-services);
 }
 
 .service__container-img{
@@ -309,13 +493,23 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .service__more{
     /* position */
-
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     font-size: 1.7rem;
     padding-left: 5rem;
     /* efecto */
 }
 
+.service__more::before{
+    content: "";
+    width: 3.4rem;
+    height: 1.5px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+}
 /* pseudoelemento before */
 
 .service__more:hover,
@@ -328,36 +522,59 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 
 /* para generar el escalonado de las tarjetas de servicios */
 .services__service--bottom{
-    
+    margin-top: 20rem;
 }
 .services__service--middle{
-    
+    margin-top: 10rem;
 }
 .services__service--top{
-    
+    margin-top: 0;
 }
 
 /* coloco a las formas detrás de los servicios */
 .service-shapes__item{
     /* position y z-index */
-
+    position: absolute;
+    z-index: -1;
     pointer-events: none;
 }
 .service-shapes--shape1{
     /* position */
+    top: -20%;
+    right: 22%;
 }
 .service-shapes--shape2{
     /* position */
     opacity: 0.6;
+    top: 0%;
+    right: 25%;
 }
 .service-shapes--shape3{
     /* position y animación */
-
+    top: 0%;
+    right: 15%;
+    animation: muevShape3 30s infinite;
 }
 
+@keyframes muevShape3 {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(150px);
+    }
+    70%{
+        transform: translateX(150px) translateY(500px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
 /* Estilos para la sección de Proyectos */
 .layout__projects{
     /* position y z-index */
+    position: relative;
+    z-index: 1;
 
     background-color: var(--color-bg-projects);
     padding: 14rem 10rem;
@@ -375,29 +592,54 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .projects__categories{
     /* Flex */
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    z-index: 1;
     gap: 7rem;
     margin-bottom: 5.5rem;
 }
 .categories__item{
     /* position */
+    position: relative;
 
     font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     padding: 0.8rem 0;
     /* efecto */ 
-
+    transition: all 300ms linear;
 }
 
 .projects__all{
     /* flex */
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem 7rem;
 }
 .projects__project{
-    width: calc(50% - 3.5rem); /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
+    width: calc(100% - 3.5rem); /* consigo que mis tarjetas tengan un tamaño variable. Facilita el responsive */
 }
+
+.categories__item::before{
+    content: "";
+    position: absolute;
+    bottom: 0.8rem;
+    height: 0.2rem;
+    width: 0;
+    opacity: 0;
+    background-color: var(--color-primary);
+    transition: all 300ms linear;
+}
+
+.categories__item:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+ /* .categories__item--active, */
+ /* .categories__item:hover{
+    text-decoration: underline;
+ } */
+
 .project__container-img{
     width: 100%;
     border-radius: 3rem 3rem 0 0;
@@ -406,7 +648,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 .project__img{
     width:100%;
     /* efecto */
+    transition: all 2s ease-in-out;
+}
 
+.projects__project:hover .project__img{
+    transform: scale(1.1);
 }
 
 .project__content{
@@ -421,6 +667,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
     margin-bottom: 1rem;
     /* efecto */
+    transition: all 300ms linear;
+}
+.project__title:hover{
+    color: var(--color-banner);
 }
 
 .project__tags{
@@ -428,28 +678,43 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .project-shapes__item{
     /* position y z-index */
-
+    position: absolute;
     pointer-events: none;
 }
 .project-shapes--shape1{
-    /* position */
-    
+    top: 4%;
+    right: 11%;
     opacity: 0.5;
 }
 .project-shapes--shape2{
-    /* position */
-
+    top: 8%;
+    right: 35%;
     opacity: 0.5;
-    /* animación */
-
+    animation: moveShape7 40s infinite;
 }
+
+
 .project-shapes--shape3{
-    /* position */
-
+    top: 90px;
+    right: 200px;
     opacity: 0.8;
-    /* animación */
+    animation: moveShape7 40s infinite;
+    -webkit-animation: moveProjectShape 40s infinite;
 }
-
+@keyframes moveProjectShape{
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(150px) translateY(-50px);
+    }
+    70%{
+        transform: translateX(-50px) translateY(100px);
+    }
+    100%{
+        transform: translateX(0) translateY(0);
+    }
+}
 /* Estilos para estadísticas y Mejores clientes */
 .layout__stats,
 .layout__clients{
@@ -479,18 +744,22 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .stats__progress{
     /* Flex */
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
     gap: 3rem;
 }
 .stats__stat{
-    width: 25%;
     text-align: center;
     padding: 7rem 2rem;
     border-radius: 2rem;
     border: 1px solid transparent; /* inapreciable */
 }
 /* efecto */
-
+.stats__stat:hover{
+    background: linear-gradient(180deg,var(--color-bg-dark),grey);
+    border: 1px solid var(--color-hover-dark);
+}
 .stat__icon>img{
     margin: 0 auto;
     text-align: center;
@@ -514,7 +783,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 /* Estilos para Reseñas */
 .layout__reviews{
     /* position y z-index */
-
+    position: relative;
+    z-index: 1;
     padding-top: 7rem;
     padding-bottom: 5rem;
 }
@@ -537,12 +807,15 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .reviews__content{
     /* Flex + align */
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 .reviews__review{
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .review__company{
     display: inline-block;
@@ -556,12 +829,13 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .review__author{
     /* Flex */
-
+    display: grid;
+    grid-template-columns: 10% 90%;
 }
+
 .author__container-img{
     border-radius: 90px;
     overflow: hidden;
-    width:10%;
 }
 .author__name{
     display: block; /* creo un salto de línea */
@@ -580,6 +854,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .review-shapes__item{
     /* position + z-index */
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    right: 14%;
+    opacity: 0.5;
     pointer-events: none;
 }
 
@@ -755,7 +1034,7 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .contact__subtitle{
     display: inline-block;
-    color: var(--colog-bg-btn);
+    color: var(--color-bg-btn);
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
