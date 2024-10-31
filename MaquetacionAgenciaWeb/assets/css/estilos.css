@@ -832,6 +832,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     display: grid;
     grid-template-columns: 10% 90%;
 }
+.review__img{
+    width: 50px;
+    height: 50px;
+}
 
 .author__container-img{
     border-radius: 90px;
@@ -865,7 +869,8 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 /* Estilos zona Mejores Clientes */
 .layout__clients{
     /* position + z-index */
-
+    position: relative;
+    z-index: 1;
 }
 .clients__header{
     text-align: left;
@@ -883,28 +888,37 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .clients__logos{
     /* Flex */
-
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 3rem;
 }
 .clients__item{
     /* Flex-basis */
-
 }
 .clients__img{
     filter: grayscale(25%);
     opacity: 0.5;
     /* efecto */
+    transition: all 300ms ease-in-out;
+
+}
+.clients__img:hover{
+    opacity: 1;
 }
 
 .client-shapes__item{
     /* position + z-index */
-
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    right: 0%;
 }
 
 /* Estilos últimas noticias */
 .layout__news{
     /* position + z-index */
-
+    position: relative;
+    z-index: 0;
     padding: 14rem 0;
 }
 .news__container{
@@ -925,10 +939,15 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .news__list{
     /* Flex */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .news__new{
     /* Flex + align */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
+    text-align: center;
     gap: 2rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -937,7 +956,11 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border-top: 1px solid var(--color-borders);
     border-bottom: 1px solid var(--color-borders);
     /* efecto */
+    transition: all 300ms ease-in-out;
+}
 
+.news__new:hover{
+    border-top-color: var(--color-hover-dark);
 }
 
 .news__new:last-child{
@@ -952,11 +975,18 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     border-radius: 3rem;
 
     /* efecto */
+    transition: all 2000ms ease-in-out;
+}
 
+.new__img:hover{
+    transform: scale(1.1);
 }
 
 .new__content{
     /* flex */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: left;
 }
 .new__title{
     font-size: 2.4rem;
@@ -965,7 +995,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     color: var(--color-title);
     margin-bottom: 2rem;
     /* efecto */
-
+    transition: all 300ms ease-in-out;
+}
+.new__title:hover{
+    color: var(--color-banner);
 }
 
 .new__description{
@@ -980,7 +1013,10 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
     font-size: 1.8rem;
     color: var(--color-hover-dark);
     /* efecto */
-
+    transition: all 300ms ease-in-out;
+}
+.new__more:hover{
+    color: var(--color-banner);
 }
 .new__icon{
     font-size: 1.3rem;
@@ -988,26 +1024,31 @@ No es necesario flotar los elementos (ni con float, flex, grid, grid-areas */
 }
 .new-shapes__item{
     /* position + z-index */
-
+    position: absolute;
+    z-index: -1;
 }
 .new-shapes--shape1{
     /* position */
-
+    position: absolute;
+    top: 15%;
+    left: 25%;
     opacity: 0.7;
 }
 .new-shapes--shape2{
     /* position */
-
+    top: 10%;
+    right: 0%;
     opacity: 0.7;
 }
 .new-shapes--shape3{
     /* position */
-
+    bottom: 0%;
     opacity: 0.7;
 }
 .new-shapes--shape4{
     /* position */
-
+    right: 19%;
+    bottom: 10%;
     opacity: 0.7;
 }
 
