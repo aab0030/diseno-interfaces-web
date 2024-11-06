@@ -29,14 +29,14 @@
  definimos familia de fuente que voy a utilizar */
 :root{
     --mx-width: 1240px;
-    --color-primary: #37bcf9;
+    --color-primary: #3C3D37;
     --color-secondary: #fff;
     --color-background: #ccc;
-    --color-bg: black;
+    --color-bg: #697565;
     --color-text-white: white;
     --color-text-title: #00538c;
-    --color-grey: gray;
-    --color-box-shadow: #ddd;
+    --color-grey: #3C3D37;
+    --color-box-shadow: wheat;
     --color-box-shadow2: #393d3f;
     --color-focus: #555;
 }
@@ -50,7 +50,8 @@ html{
     overflow-x: hidden;
 }
 body{
-    background: url("../img/pattern.png");
+    /* background: url("../img/pattern.png"); */
+    background-color: #ECDFCC;
 }
 /* wrap queremos que los elementos "hijos" dispongan de estos estilos */
 .header__wrap, .content__wrap, .footer__wrap{
@@ -66,7 +67,7 @@ body{
 /* Cabecera */
 .header{
     width: 100%;
-    height: 70px;
+    height: 150px;
     background-color: var(--color-bg);
     font-family: "BebasNeue";
     color: var(--color-text-white);
@@ -78,73 +79,23 @@ body{
 
 .header__logo{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 200px;
-    height: 50px;
+    grid-template-columns: 1fr;
+    width: 100px;
+    height: 100px;
     background-color: var(--color-primary);
     text-align: center;
-    margin-top: 8px;
+    margin-top: 20px;
     margin-left: 20px;
-    letter-spacing: 1px;
     cursor: pointer;
     overflow: hidden;
     /* transición */
     transition: all 500ms;
 }
 
-.header__logo h3{
-    
-    font-size: 40px;
-    margin-right: 65px;
-    /* transición */
-}
-
-/* efecto con keyframes - hover en el Logo */
-.header__logo:hover h3{
-    animation: mueveDerecha 2s;
-}
-@keyframes mueveDerecha {
-    from{
-        transform: translateX(200%);
-    }
-}
-
 /* efecto hover en Logo */
 .header__logo:hover{
-    border-radius: 5px;
-    background-color: var(--color-background);
-    color: var(--color-bg);
-}
-
-.logo__gear{
-    display: grid; 
-    
-    height: 50px;
-    font-size: 30px;
-    margin-top: 4px;
-    margin-left: 26px;
-
-    /* A la hora de crear animación */
-    animation: girarRueda 4s linear infinite;
-}
-
-
-
-/* animación logo rueda */
-@keyframes girarRueda{
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-.header__logo:hover .logo__gear{
-    animation: entraRueda 2s;
-}
-/* efecto de desaparece y vuelve keyframes */
-@keyframes entraRueda {
-    from{
-        transform: translateY(200%);
-    }
+    border-radius: 10px;
+    transform: scale(1.1);
 }
 
 .header__menu{
@@ -156,11 +107,11 @@ body{
     grid-template-columns: repeat(4,1fr);
 }
 .menu__list li{
-    font-size: 24px;
+    font-size: 28px;
     display: inline-block; /* puedo flotar con el float o bien mediante inline-block. Funcionaría igual */
     margin: 0px 20px 0px 20px;
     letter-spacing: 1px;
-    line-height: 70px;
+    line-height: 15rem;
 }
 .menu__list li a{
     color: var(--color-text-white);
@@ -170,16 +121,16 @@ body{
 }
 /* hover */
 .menu__list li:hover a{
-    color: var(--color-primary);
+    color: var(--color-background);
     transform: scale(1.1);
 }
 /* Maquetando el Banner */
 .content__banner{
+    text-align: center;
     width: 95.5%;
     height: 100px;
-    border: 10px solid var(--color-text-white);
     box-shadow: 0px 0px 2px var(--color-gray);
-    background: url("../img/bakbaner.png");
+    background: url("../img/bgroundimg2.jpg");
     background-position: -200px -200px;
     margin: 20px auto;
     overflow: hidden;
@@ -202,48 +153,25 @@ body{
     width: 850px;
     font-family: "BebasNeue";
     color: var(--color-text-white);
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 8rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 1px var(--color-bg);
     margin: 10px auto;
-    /* animación */
-    animation: letras 10s linear;
 }
 
-/* keyframes */
-@keyframes letras {
-    0%{
-        top: 0;
-        transform: translateX(-200%);
-        font-size: 75px;
-    }
-    35%{
-        transform: translateX(200%);
-        font-size: 75px;
-    }
-    50%{
-        transform: translateX(-200%);
-        opacity: 0.5;
-        font-size: 75px;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-        font-size: 45px;
-    }
-    
-}
 .content__cards{
     display: grid;
-    grid-template-columns: repeat(5,1fr) 5%;
+    grid-template-columns: repeat(4,1fr) 5%;
 }
 /* Tarjetas */
 .cards__card{
     display: grid;
     grid-template-rows: repeat(4,1fr);
-    height: 260px;
-    border: 1px solid var(--color-backgroung);
+    height: 310px;
+    border: 1px solid var(--color-box-shadow);
     box-shadow: 1px 1px 4px var(--color-box-shadow);
+    background-color: var(--color-secondary);
     overflow: hidden;
     margin: 22px;
     margin-top: 40px;
@@ -268,6 +196,10 @@ body{
     }    
 }
 
+/* .cards__card:first-child{
+    background-color: var(--color-background);
+} */
+
 .cards__card:last-child{
     margin-right: 0px;
 }
@@ -287,30 +219,19 @@ body{
 
 .card__category{
     width: 100%;
-    height: 50px;
-    font-family: "TrebuchetMS";
+    height: 55px;
+    /* font-family: "TrebuchetMS";
     font-size: 21px;
     font-weight: bold;
     text-align: center;
-    color: var(--color-text-title);
-    transition: all 500ms;
+    color: var(--color-text-title); */
 }
 
-    
-/*efecto hover en la carta - modificamos card_category */
-.cards__card:hover .card__category{
-    animation: titulo 500ms linear;
-    color: var(--color-text-white);
-}
-@keyframes titulo{
-    from{
-        transform: translateY(-300%);
-    }
-}
 .card__description{
     font-family: "TrebuchetMS";
     text-align: center;
-    color: var(--color-text-title);
+    color: var(--color-grey);
+    padding: 0.4rem;
     font-size: 14px;
     /* transición */
 }
@@ -340,8 +261,9 @@ body{
     width: auto;
     height: 45px;
     line-height: 49px;
-    background: url("../img/pxgray.png"), var(--color-text-white);
-    box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
+    background: var(--color-grey);
+    box-shadow: 0px 1px 0px var(--color-background), 1px 2px 0px var(--color-background), 2px 3px 0px var(--color-background), 3px 4px 0px var(--color-background);
+    color: var(--color-secondary);
     font-size: 30px;
     font-family: "BebasNeue";
     font-weight: normal;
@@ -553,7 +475,8 @@ body{
     font-size: 40px;
     font-weight: normal;
     letter-spacing: 2px;
-    background: url("../img/pxgray.png"), var(--color-text-white);
+    background: var(--color-grey);
+    color: var(--color-secondary);
     box-shadow: 0px 1px 0px var(--color-box-shadow2), 1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2), 3px 4px 0px var(--color-box-shadow2);
     margin: 0px auto;
     margin-top: 20px;
