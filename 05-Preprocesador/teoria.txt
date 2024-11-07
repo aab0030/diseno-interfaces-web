@@ -1,0 +1,3 @@
+Preprocesadores CSS: Es un programa que te permite generar CSS a partir de la syntax(en-US) única del Preprocesador.
+Características: variables, mixins, selectores anidados, condicionales, bucles.
+Nosotros tenemos un archivo scss que se transpila a un archivo css.

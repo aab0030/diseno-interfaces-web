@@ -1,0 +1,25 @@
+body {
+  background-color: #ccc;
+}
+
+h1 {
+  color: blue;
+}
+
+.caja {
+  border: 1px solid black;
+  margin: 0px auto;
+  padding: 10px;
+  text-align: center;
+  background-color: lightblue;
+}
+.caja h2 {
+  color: blue;
+}
+.caja .info {
+  border: 1px solid black;
+  background-color: #ccc;
+}
+.caja .info h3 {
+  color: green;
+}/*# sourceMappingURL=estilos.css.map */

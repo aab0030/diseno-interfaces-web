@@ -556,11 +556,59 @@ body{
 .articles__blog:hover{
     background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
                                             ,#303030,#3D3D3D,#494949,#555555
-                                            ,#595959,#666666,#727272,#7E7E7E);
+                                            ,#595959,#666666,#727272,#7E7E7E); 
+    animation: degradado 1s;
     border-radius: 20px;
     /* box-shadow: inset 5px 5px 5px 5px var(--color-background); */
     /* box-shadow: 0px 0px 10px var(--color-gray); */
     /* animation: iluminacion 10s infinite linear; */
+  }
+  @keyframes degradado {
+    0%{
+        background: linear-gradient(to right top,#080808,#141414);
+    }
+    9%{
+        background: linear-gradient(to right top,#080808,#141414,#202020);
+    }
+    18%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c);
+    }
+    27%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030);
+    }
+    36%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D);
+    }
+    45%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949);
+    }
+    54%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949,#555555);
+    }
+    63%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949,#555555
+                                            ,#595959);
+    }
+    72%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949,#555555
+                                            ,#595959,#666666);
+    }
+    86%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949,#555555
+                                            ,#595959,#666666,#727272);
+    }
+    100%{
+        background: linear-gradient(to right top,#080808,#141414,#202020,#2c2c2c
+                                            ,#303030,#3D3D3D,#494949,#555555
+                                            ,#595959,#666666,#727272,#7E7E7E);
+    }
   }
 /* FOOTER */
 .content__footer{
