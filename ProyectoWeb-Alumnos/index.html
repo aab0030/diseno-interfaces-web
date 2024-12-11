@@ -1,310 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Proyecto Web</title>
-    <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/reset_estilos.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body>
-    <!-- Inicio Cabecera -->
-    <header class="header">
-      <div class="header__wrap">
-        <div class="header__logo">
-          <img src="img/1004-removebg-preview.png">
-        </div>
-        <nav class="header__menu">
-          <ul class="menu__list">
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">PRODUCTOS</a></li>
-            <li><a href="#">RESEÑAS</a></li>
-            <li><a href="#">CONTÁCTANOS</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- fin de la Cabecera -->
 
-    <main class="content__wrap">
-      <section class="content__info">
-        <!-- Inicio Banner -->
-        <div class="content__banner">
-          <h1>Destacados de esta semana</h1>
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Proyecto Web</title>
+  <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/reset_estilos.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- Inicio Cabecera -->
+  <header class="header">
+    <div class="header__wrap">
+      <div class="header__logo">
+        <img src="img/1004-removebg-preview.png">
+      </div>
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">PRODUCTOS</a></li>
+          <li><a href="#">RESEÑAS</a></li>
+          <li><a href="#">CONTÁCTANOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- fin de la Cabecera -->
+
+  <main class="content__wrap">
+    <section class="content__info">
+      <!-- Inicio Banner -->
+      <div class="content__banner">
+        <h1>Destacados de esta semana</h1>
+      </div>
+      <!-- fin de Banner -->
+      <!-- Inicio Tarjetas -->
+      <div class="content__cards">
+        <div class="cards__card">
+          <img src="img/ERfondo.jpg">
+          <div class="cards__category">
+            <img src="img/eldenring.png">
+          </div>
+          <p class="card__description">
+            Elden Ring es un videojuego de rol de acción desarrollado por FromSoftware
+            y publicado por Bandai Namco Entertainment.
+          </p>
         </div>
-        <!-- fin de Banner -->
-        <!-- Inicio Tarjetas -->
-        <div class="content__cards">
-          <div class="cards__card">
-            <img src="img/ERfondo.jpg">
-            <div class="cards__category">
-              <img src="img/eldenring.png">
-            </div>
-            <p class="card__description">
-              Elden Ring es un videojuego de rol de acción desarrollado por FromSoftware 
-              y publicado por Bandai Namco Entertainment.
-            </p>
+        <div class="cards__card">
+          <img src="img/black-myth-wukong.jpg" alt="">
+          <div class="cards__category category__img">
+            <img src="img/Black-Myth-Wukong-Logo-White-Text-PNG.png">
           </div>
-          <div class="cards__card">
-            <img src="img/black-myth-wukong.jpg" alt="">
-            <div class="cards__category category__img">
-              <img src="img/Black-Myth-Wukong-Logo-White-Text-PNG.png">
-            </div>
-            <p class="card__description">
-              Black Myth: Wukong es un videojuego de rol de acción, desarrollado y distribuido por Game Science.
-            </p>
-          </div>
-          <div class="cards__card">
-            <img src="img/league-of-legends-background.jpg" alt="">
-            <div class="cards__category">
-              <img src="img/pngegg_1_-removebg-preview.png">
-            </div>
-            <p class="card__description">League of Legends es un videojuego multijugador de batalla en línea desarrollado por Riot Games.</p>
-          </div>
-          <div class="cards__card">
-            <img src="img/laytonbg.jpg" alt="">
-            <div class="cards__category">
-              <img src="img/layton-removebg-preview.png">
-            </div>
-            <p class="card__description">
-              Professor Layton and The New World of Steam para Nintendo Switch es una aventuras de puzle.
-            </p>
-          </div>
+          <p class="card__description">
+            Black Myth: Wukong es un videojuego de rol de acción, desarrollado y distribuido por Game Science.
+          </p>
         </div>
-        <!-- fin de Tarjetas -->
-      </section>
-      <!-- Inicio de Barra Lateral -->
-      <div class="core__wrap">
-        <!-- Inicio de los Artículos -->
-        <section class="content__articles">
-          <h2 class="articles__title">Últimos artículos</h2>
-          <div class="articles__wrap">
-            <article class="articles__article">
-              <div class="article__datos">
-                <span>Fecha: 01 de enero</span>
-                <span>Categoría: Pruebas</span>
-              </div>
-              <h4 class="article__subtitle">
-                <a href="#">Título de artículo 1</a>
-              </h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-            </article>
-            <article class="articles__article">
-              <div class="article__datos">
-                <span>Fecha: 01 de febrero</span>
-                <span>Categoría: Pruebas</span>
-              </div>
-              <h4 class="article__subtitle">
-                <a href="#">Título de artículo 2</a>
-              </h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-            </article>
-            <article class="articles__article">
-              <div class="article__datos">
-                <span>Fecha: 01 de marzo</span>
-                <span>Categoría: Pruebas</span>
-              </div>
-              <h4 class="article__subtitle">
-                <a href="#">Título de artículo 3</a>
-              </h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-            </article>
-            <article class="articles__article">
-              <div class="article__datos">
-                <span>Fecha: 01 de abril</span>
-                <span>Categoría: Pruebas</span>
-              </div>
-              <h4 class="article__subtitle">
-                <a href="#">Título de artículo 4</a>
-              </h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-            </article>
-            <article class="articles__article">
-              <div class="article__datos">
-                <span>Fecha: 01 de agosto</span>
-                <span>Categoría: Pruebas</span>
-              </div>
-              <h4 class="article__subtitle">
-                <a href="#">Título de artículo 5</a>
-              </h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-                dolores. Consequatur quis tenetur, modi quod quam repellat facilis
-                minus molestias dicta eum ex voluptatibus itaque necessitatibus,
-                possimus quas? Fugiat, veritatis!
-              </p>
-            </article>
+        <div class="cards__card">
+          <img src="img/league-of-legends-background.jpg" alt="">
+          <div class="cards__category">
+            <img src="img/pngegg_1_-removebg-preview.png">
           </div>
-          <article class="articles__blog">
-            <a href="#">Ir al catálogo de videojuegos</a>
+          <p class="card__description">League of Legends es un videojuego multijugador de batalla en línea desarrollado
+            por Riot Games.</p>
+        </div>
+        <div class="cards__card">
+          <img src="img/laytonbg.jpg" alt="">
+          <div class="cards__category">
+            <img src="img/layton-removebg-preview.png">
+          </div>
+          <p class="card__description">
+            Professor Layton and The New World of Steam para Nintendo Switch es una aventuras de puzle.
+          </p>
+        </div>
+      </div>
+      <!-- fin de Tarjetas -->
+    </section>
+    <!-- Inicio de Barra Lateral -->
+    <div class="core__wrap">
+      <!-- Inicio de los Artículos -->
+      <section class="content__articles">
+        <h2 class="articles__title">Últimos juegos añadidos a nuestra tienda</h2>
+        <div class="articles__wrap">
+          <article class="articles__article">
+            <div class="article__img">
+              <img src="img/pokemonTCG.png" alt="" srcset="">
+            </div>
+            <h4 class="article__subtitle">
+              <a href="#">Pokémon TCG Pocket el juego de moda</a>
+            </h4>
+            <p>
+              El juego de cartas JCC Pokémon Pocket, que salió el pasado 30 de octubre en teléfonos iOS y Android, está
+              de enhorabuena desde su lanzamiento. Esta nueva versión, adaptada a dispositivos móviles y con partidas
+              más veloces y dinámicas, se ha convertido en un fenómeno de masas desde su lanzamiento, y ya ha superado
+              las 10 millones de descargas, ...
+            </p>
+
+            <div class="article__datos">
+              <span>Fecha: 30 de octubre</span>
+              <span>Precio: gratis</span>
+              <span>Ver más</span>
+            </div>
           </article>
-        </section>
-        <aside class="content__lateral">
-          <h3 class="lateral__title">BUSCAR</h3>
-          <div class="lateral__search">
-            <form>
-              <input type="text" />
-              <input type="button" value="L" class="search__icon" />
-            </form>
+          <article class="articles__article">
+            <div class="article__img">
+              <img src="img/bo6.jpg" alt="" srcset="">
+            </div>
+            <h4 class="article__subtitle">
+              <a href="#">El nuevo shooter de Activision Blizzard</a>
+            </h4>
+            <p>
+              Call of Duty: Black Ops 6 es un videojuego de acción de disparos en primera persona desarrollado por
+              Treyarch y Raven Software y publicado por Activision. Es la vigésima primera entrega de la serie Call of
+              Duty y es la séptima entrada principal de la subserie Black Ops, después de Call of Duty: Black Ops Cold
+              War.
+            </p>
+
+            <div class="article__datos">
+              <span>Fecha: 25 de octubre</span>
+              <span>Precio: 79.99&euro;</span>
+              <span>Ver más</span>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__img">
+              <img src="img/dbsz.jpg" alt="" srcset="">
+            </div>
+            <h4 class="article__subtitle">
+              <a href="#">El nuevo juego de pelea de Dragon Ball</a>
+            </h4>
+            <p>
+              DRAGON BALL: Sparking! ZERO lleva a un nuevo nivel el legendario estilo de juego de la serie Budokai
+              Tenkaichi. Aprende a dominar a diversos personajes jugables, cada uno con sus habilidades,
+              transformaciones y técnicas propias.
+            </p>
+            <div class="article__datos">
+              <span>Fecha: 11 de octubre</span>
+              <span>Precio: 69.99 &euro;</span>
+              <span>Ver mas</span>
+            </div>
+          </article>
+          <article class="articles__article">
+            <div class="article__img">
+              <img src="img/fs-bg.avif" alt="" srcset="">
+            </div>
+            <h4 class="article__subtitle">
+              <a href="#">Farming simulator 2025 ya esta disponible aquí</a>
+            </h4>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+              dolores. Consequatur quis tenetur, modi quod quam repellat facilis
+              minus molestias dicta eum ex voluptatibus itaque necessitatibus,
+              possimus quas? Fugiat, veritatis!
+            </p>
+            
+            <div class="article__datos">
+              <span>Fecha: 01 de abril</span>
+              <span>Categoría: Pruebas</span>
+            </div>
+          </article>
+        </div>
+        <article class="articles__blog">
+          <a href="#">Ir al catálogo de videojuegos</a>
+        </article>
+      </section>
+      <aside class="content__lateral">
+        <h3 class="lateral__title">BUSCAR</h3>
+        <div class="lateral__search">
+          <form>
+            <input type="text" />
+            <input type="button" value="L" class="search__icon" />
+          </form>
+        </div>
+        <h3 class="lateral__title">LOGIN</h3>
+        <div class="lateral__login aside-box">
+          <form>
+            <div class="login__wrap">
+              <label class="lateral-box__user aside-box__icon">U</label>
+              <input type="email" />
+            </div>
+            <div class="login__wrap">
+              <label class="lateral-box__password aside-box__icon">w</label>
+              <input type="password" />
+            </div>
+            <div class="input__wrap">
+              <input type="submit" value="Entrar" />
+              <input type="reset" value="Limpiar" />
+            </div>
+            <div class="link__wrap">
+              <a href="#">Regístrate aquí</a>
+              <a href="#">Has olvidado tu contraseña?</a>
+            </div>
+          </form>
+        </div>
+        <h3 class="lateral__title">QUIENES SOMOS</h3>
+        <div class="lateral__team aside-box">
+          <div class="team__wrap">
+            <img src="img/pngegg.png" alt="Patrick Bateman">
+            <p class="social__overlay">Ángel Alamilla Bueno</p>
           </div>
-          <h3 class="lateral__title">LOGIN</h3>
-          <div class="lateral__login aside-box">
-            <form>
-                <div class="login__wrap">
-                  <label class="lateral-box__user aside-box__icon">U</label>
-                  <input type="email" />
-                </div>
-                <div class="login__wrap">
-                  <label class="lateral-box__password aside-box__icon">w</label>
-                  <input type="password" />
-                </div>
-                <div class="input__wrap">
-                    <input type="submit" value="Entrar" />
-                    <input type="reset" value="Limpiar" />
-                </div>
-                <div class="link__wrap">
-                    <a href="#">Regístrate aquí</a>
-                    <a href="#">Has olvidado tu contraseña?</a>
-                </div>
-            </form>
+          <div class="team__wrap">
+            <p class="social__overlay">Emilio José</p>
+            <img src="img/ninaPozo-removebg-preview.png" alt="">
           </div>
-          <h3 class="lateral__title">QUIENES SOMOS</h3>
-          <div class="lateral__team aside-box">
-            <div class="team__wrap">
-              <img src="img/pngegg.png" alt="Patrick Bateman">
-              <p class="social__overlay">Ángel Alamilla Bueno</p>
-            </div>
-            <div class="team__wrap">
-              <p class="social__overlay">Emilio José</p>
-              <img src="img/ninaPozo-removebg-preview.png" alt="">
-            </div>
-            <div class="team__wrap">
-              <img src="img/pngwing.com-removebg-preview.png" alt="">
-              <p>Estela García Pintos</p>
-            </div>
-            <div class="team__wrap">
-              <p class="social__overlay">Luís Gonzales</p>
-              <img src="img/toby_luis-removebg-preview.png" alt="">
-            </div>
-            <div class="team__wrap">
-              <img src="img/maxxxine-removebg-preview.png" alt="">
-              <p class="social__overlay">Enya García</p>
-            </div>
+          <div class="team__wrap">
+            <img src="img/pngwing.com-removebg-preview.png" alt="">
+            <p>Estela García Pintos</p>
           </div>
-        </aside>
-        <!-- fin de Aside -->
+          <div class="team__wrap">
+            <p class="social__overlay">Luís Gonzales</p>
+            <img src="img/toby_luis-removebg-preview.png" alt="">
+          </div>
+          <div class="team__wrap">
+            <img src="img/maxxxine-removebg-preview.png" alt="">
+            <p class="social__overlay">Enya García</p>
+          </div>
+        </div>
+      </aside>
+      <!-- fin de Aside -->
+    </div>
+    <!-- fin de los Artículos -->
+  </main>
+  <!-- Inicio de Pié de Página -->
+  <footer class="content__footer">
+    <div class="footer__wrap">
+      <div class="footer__menuFooter">
+        <h5 class="footer__title">MENÚ</h5>
+        <ul class="footer__list">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">PRODUCTO</a></li>
+          <li><a href="#">RESEÑAS</a></li>
+          <li><a href="#">CONTÁCTANOS</a></li>
+        </ul>
       </div>
-      <!-- fin de los Artículos -->
-    </main>
-    <!-- Inicio de Pié de Página -->
-    <footer class="content__footer">
-      <div class="footer__wrap">
-        <div class="footer__menuFooter">
-          <h5 class="footer__title">MENÚ</h5>
-          <ul class="footer__list">
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">FORMACIÓN</a></li>
-            <li><a href="#">CONTACTO</a></li>
-          </ul>
-        </div>
-        <div class="footer__location">
-          <h5 class="footer__title">DÓNDE ESTAMOS?</h5>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2996623515555!2d-4.462811723546774!3d36.69133637227841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20%F0%9F%A5%87%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1698701252334!5m2!1ses!2ses"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="footer__info">
-          <h5 class="footer__title">Desarrollado con</h5>
-          <p>
-            <img
-              src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png"
-              alt="Creado con HTML y CSS"
-            />
-          </p>
-          <h5 class="footer__title">Optimizado para</h5>
-          <p class="footer__browsers">
-            <a href="#">
-              <img src="img/firefox-icon.png" alt="Firefox" />
-            </a>
-            <a href="#">
-              <img src="img/chrome.png" alt="Chrome" />
-            </a>
-            <a href="#">
-              <img src="img/safari.png" alt="Safari" />
-            </a>
-            <a href="#">
-              <img src="img/android.png" alt="Android" />
-            </a>
-            <a href="#">
-              <img src="img/Opera_256x256.png" alt="Opera" />
-            </a>
-          </p>
-          <h5 class="footer__title">AUTOR</h5>
-          <p>&copy; Alumn@ - WEB</p>
-        </div>
+      <div class="footer__info">
+        <h5 class="footer__title">Desarrollado con</h5>
+        <p>
+          <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS" />
+        </p>
+        <h5 class="footer__title">Optimizado para</h5>
+        <p class="footer__browsers">
+          <a href="#">
+            <img src="img/firefox-icon.png" alt="Firefox" />
+          </a>
+          <a href="#">
+            <img src="img/chrome.png" alt="Chrome" />
+          </a>
+          <a href="#">
+            <img src="img/safari.png" alt="Safari" />
+          </a>
+          <a href="#">
+            <img src="img/android.png" alt="Android" />
+          </a>
+          <a href="#">
+            <img src="img/Opera_256x256.png" alt="Opera" />
+          </a>
+        </p>
+        <h5 class="footer__title">AUTOR</h5>
+        <p>&copy; Ángel Alamilla Bueno - WEB</p>
       </div>
-    </footer>
-    <!-- fin de Pié de Página -->
-  </body>
+    </div>
+  </footer>
+  <!-- fin de Pié de Página -->
+</body>
+
 </html>
